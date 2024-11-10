@@ -31,7 +31,8 @@
   <main>
     <section>
       <h2>Descrição da API</h2>
-      <p>Esta API permite gerir informações sobre alunos, incluindo criação, leitura, atualização e eliminação de dados. É ideal para aplicações de gestão escolar e outras onde seja necessário manter um registo de alunos.</p>
+      <p>Esta API permite gerir informações sobre alunos, incluindo criação, leitura, atualização e eliminação de dados.
+         É ideal para aplicações de gestão escolar e outras onde seja necessário manter um registo de alunos.</p>
     </section>
 
     <section>
@@ -47,7 +48,8 @@
 
     <section>
       <h2>Estrutura da Base de Dados</h2>
-      <p>A aplicação utiliza um ficheiro JSON como base de dados, onde os dados dos alunos são armazenados. O ficheiro é atualizado automaticamente com cada operação de criação, atualização ou eliminação.</p>
+      <p>A aplicação utiliza um ficheiro JSON como base de dados, onde os dados dos alunos são armazenados. 
+        O ficheiro é atualizado automaticamente com cada operação de criação, atualização ou eliminação.</p>
     </section>
 
     <section>
@@ -88,7 +90,7 @@ curl -X PUT -H "Content-Type: application/json" -d '{
 }' http://localhost:3000/alunos/1
       </code></pre>
 
-      <h3>Deletar um aluno</h3>
+      <h3>Remover um aluno</h3>
       <pre><code>curl -X DELETE http://localhost:3000/alunos/1</code></pre>
     </section>
   </main>
