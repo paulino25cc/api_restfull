@@ -1,0 +1,22 @@
+{
+  "name": "restful-api-novo-franciscosantos1",
+  "version": "1.0.0",
+  "description": "Esta informação em português [README.md](README.md)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "'"
+  },
+  "author": "Francisco Santos",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^4.21.1",
+    "lowdb": "^7.0.1"
+  }
+}

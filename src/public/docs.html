@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação da API de Alunos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 800px;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>API de Gestão de Alunos</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Descrição da API</h2>
+      <p>Esta API permite gerir informações sobre alunos, incluindo criação, leitura, atualização e eliminação de dados. É ideal para aplicações de gestão escolar e outras onde seja necessário manter um registo de alunos.</p>
+    </section>
+
+    <section>
+      <h2>Iniciar o Servidor</h2>
+      <ol>
+        <li>Certifique-se de que o <strong>Node.js</strong> está instalado no sistema.</li>
+        <li>Clone o repositório do projeto.</li>
+        <li>Instale as dependências com o comando: <code>npm install</code></li>
+        <li>Inicie o servidor com: <code>npm start</code></li>
+        <li>A API ficará disponível em <code>http://localhost:3000</code></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Estrutura da Base de Dados</h2>
+      <p>A aplicação utiliza um ficheiro JSON como base de dados, onde os dados dos alunos são armazenados. O ficheiro é atualizado automaticamente com cada operação de criação, atualização ou eliminação.</p>
+    </section>
+
+    <section>
+      <h2>Endpoints da API</h2>
+      <ul>
+        <li><code>GET /alunos</code> - Retorna todos os alunos registados</li>
+        <li><code>GET /alunos/:id</code> - Retorna um aluno específico, identificado pelo seu ID</li>
+        <li><code>POST /alunos</code> - Cria um novo aluno</li>
+        <li><code>PUT /alunos/:id</code> - Atualiza as informações de um aluno</li>
+        <li><code>DELETE /alunos/:id</code> - Remove um aluno da base de dados</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Exemplos de Uso</h2>
+
+      <h3>Obter todos os alunos</h3>
+      <pre><code>curl http://localhost:3000/alunos</code></pre>
+
+      <h3>Obter um aluno específico</h3>
+      <pre><code>curl http://localhost:3000/alunos/1</code></pre>
+
+      <h3>Criar um aluno</h3>
+      <pre><code>
+curl -X POST -H "Content-Type: application/json" -d '{
+  "nome": "João",
+  "curso": "Informática",
+  "ano": 2001
+}' http://localhost:3000/alunos
+      </code></pre>
+
+      <h3>Atualizar um aluno</h3>
+      <pre><code>
+curl -X PUT -H "Content-Type: application/json" -d '{
+  "nome": "Maria",
+  "curso": "Engenharia",
+  "ano": 2002
+}' http://localhost:3000/alunos/1
+      </code></pre>
+
+      <h3>Deletar um aluno</h3>
+      <pre><code>curl -X DELETE http://localhost:3000/alunos/1</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Paulino Cerqueira</p>
+  </footer>
+</body>
+</html>
